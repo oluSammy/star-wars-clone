@@ -1,12 +1,13 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Dashboard from "../pages/Dashboard/Dashboard.component";
 import LoginPage from "../pages/LoginPage/LoginPage.component";
 
 const Routes = () => {
+  const location = useLocation();
   return (
-    <Switch>
+    <Switch location={location} key={location.pathname}>
       <Route exact path="/" component={LoginPage} />
-      <Route exact path="/dashboard" component={Dashboard} />
+      <Route path="/dashboard" component={Dashboard} />
     </Switch>
   );
 };

@@ -1,61 +1,66 @@
 import { makeStyles } from "@material-ui/core";
 
-const navBarStyles = makeStyles((theme) => ({
+const sidebarStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "0 3rem",
-    paddingTop: ".4rem",
-
-    "& *": {
-      // border: '1px solid orangered'
-    },
+    paddingTop: "2rem",
   },
-  navContent: {
-    display: "flex",
-    alignItems: "center",
+  logoBox: {
+    paddingLeft: "4rem",
+    // width: "18rem",
+    // height: "10rem",
+    // margin: "0 auto",
   },
-  title: {
-    fontSize: "1.7rem",
-    fontWeight: "normal",
+  image: {
+    //   height: '100%',
+    // width: "100%",
+    //   objectFit: 'cover',
   },
   navList: {
-    display: "flex",
-    alignItems: "center",
-    listStyleType: "none",
+    marginTop: "3rem",
   },
-  navIcon: {
-    marginLeft: "2rem",
-    // position: "relative",
+  listItem: {
+    paddingLeft: "4rem",
+    marginBottom: "1.1rem",
   },
-  greyIcon: {
-    "&::after": {
-      content: ".",
-      color: "red",
-      fontSize: "4rem",
+  activeNavLink: {
+    borderRight: "2px solid #FDDB00",
+
+    "& $ak": {
+      fill: "#FDDB00",
+    },
+    "& $svgBg": {
+      backgroundColor: "#FFFFF0",
+    },
+    "& $listText": {
+      color: "#000000",
     },
   },
-  navImgBox: {
-    height: "4rem",
-    width: "4rem",
-    marginLeft: "3rem",
+  svgBg: {
+    backgroundColor: "#F2F2F2",
+    width: "2.8rem",
+    height: "2.8rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  navImg: {
-    height: "100%",
-    width: "100%",
-    display: "block",
-    objectFit: "cover",
+  listIcon: {},
+  // F2F2F2
+  ak: {
+    fill: "#A3ABB7",
+    width: "1.6rem",
+    height: "1.6rem",
+
+    "&:hover": {
+      fill: "green",
+    },
   },
-  dot: {
-    width: "5px",
-    height: "5px",
-    backgroundColor: "red",
-    position: "absolute",
-    top: '5px',
-    borderRadius: "50%",
-    right: '4px'
+  listText: {
+    color: "#A3ABB7",
+    fontSize: "1.6rem",
+    fontWeight: 700,
+    textTransform: "capitalize",
+    marginLeft: "-.5rem",
   },
 }));
 
-export default navBarStyles;
+export default sidebarStyles;

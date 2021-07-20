@@ -8,7 +8,6 @@ const theme = createTheme({
           fontSize: "62.5%",
         },
         body: {
-          transition: "all .2s",
           "& *": {
             margin: 0,
             padding: 0,
