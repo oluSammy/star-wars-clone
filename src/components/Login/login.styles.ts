@@ -6,6 +6,16 @@ const loginStyles = makeStyles((theme) => ({
     marginLeft: "10%",
     fontFamily: "Poppins",
     color: "#2B2D42",
+    "@media (max-width: 861px)": {
+      width: "45%",
+    },
+    "@media (max-width: 737px)": {
+      width: "60%",
+    },
+    "@media (max-width: 383px)": {
+      marginLeft: "7%",
+      width: "70%",
+    },
   },
   loginTitle: {
     fontSize: "2rem",

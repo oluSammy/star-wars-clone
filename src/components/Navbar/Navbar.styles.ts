@@ -5,8 +5,7 @@ const navBarStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "0 3rem",
-    paddingTop: ".4rem",
+    padding: "1rem 3rem",
 
     "& *": {
       // border: '1px solid orangered'
@@ -52,9 +51,9 @@ const navBarStyles = makeStyles((theme) => ({
     height: "5px",
     backgroundColor: "red",
     position: "absolute",
-    top: '5px',
+    top: "5px",
     borderRadius: "50%",
-    right: '4px'
+    right: "4px",
   },
 }));
 

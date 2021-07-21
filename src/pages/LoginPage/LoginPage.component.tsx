@@ -3,6 +3,7 @@ import shipBg from "../../assets/images/star-ship.svg";
 import clsx from "clsx";
 import Login from "../../components/Login/Login.component";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import starShip from "../../assets/images/astronaut.svg";
 
 const LoginPage = () => {
   const classes = loginStyles();
@@ -14,7 +15,9 @@ const LoginPage = () => {
             Welcome to Star Wars <br /> the Clone Wars
           </h1>
         </div>
-        <div className={classes.shipBg}></div>
+        <div className={classes.shipBg}>
+          <img src={starShip} alt="img" className={classes.makeImg} />
+        </div>
         <div className={classes.blackBg}>mm</div>
       </div>
       <div className={classes.login}>

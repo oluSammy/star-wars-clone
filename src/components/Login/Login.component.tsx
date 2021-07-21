@@ -5,6 +5,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import Loader from "react-loader-spinner";
+import { motion } from "framer-motion";
+import { pageTransition, transit } from "../../utils/animate";
 
 const Login = () => {
   const classes = loginStyles();
@@ -17,7 +19,7 @@ const Login = () => {
     setTimeout(() => {
       setIsLoading(false);
       history.push("/dashboard");
-    }, 2500);
+    }, 800);
   };
 
   const initValues = {
@@ -39,7 +41,14 @@ const Login = () => {
   });
 
   return (
-    <div className={classes.root}>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+      transition={transit}
+      className={classes.root}
+    >
       <h2 className={classes.loginTitle}>
         Sign in to continue to <br /> your account.
       </h2>
@@ -103,7 +112,7 @@ const Login = () => {
           </Form>
         )}
       </Formik>
-    </div>
+    </motion.div>
   );
 };
 
