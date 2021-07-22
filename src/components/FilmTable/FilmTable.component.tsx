@@ -26,14 +26,15 @@ function createData(
   return { title, director, producer, date, episode, characters };
 }
 
-const rows: any = [];
 
 const FilmTable = () => {
   const classes = filmTable();
   const { films, isLoading, error } = useContext(SwapiContext);
+  const rows: any = [];
 
   // fetch films
   // const { isLoading, data, error } = useFetch("all-films", "films");
+
 
   if (films && !isLoading) {
     films.results.forEach((film: Record<string, any>) => {
