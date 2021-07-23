@@ -7,7 +7,6 @@ import TableRow from "@material-ui/core/TableRow";
 import clsx from "clsx";
 import filmTable from "./FilmTable.styles";
 import testImg from "../../assets/images/navImg.png";
-// import { useFetch } from "../../hooks/use-fetch";
 import DataTable from "../DataTableLoader/DataTableLoader";
 import { limitSentence } from "../../utils/utils";
 import { motion } from "framer-motion";
