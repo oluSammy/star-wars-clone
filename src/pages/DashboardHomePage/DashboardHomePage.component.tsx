@@ -16,9 +16,6 @@ const DashboardHomePage = () => {
   const { films, starShips, people, vehicles, species, isLoading } =
     useContext(SwapiContext);
 
-  console.log(films, "FILMU");
-  console.log(isLoading, "ISLOA");
-
   return (
     <div className={classes.root}>
       <div className={classes.nav}>

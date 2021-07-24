@@ -103,7 +103,6 @@ const StarshipPage = () => {
     } catch (err) {
       setIsFetching(false);
       setFetchError(err);
-      console.log(err);
     }
   };
 
@@ -124,7 +123,7 @@ const StarshipPage = () => {
         {starShips && (
           <div className={navStyles.navigation}>
             <IconButton
-              disabled={!prevPage ? true : false}
+              disabled={(!prevPage || isFetching) ? true : false}
               onClick={() => {
                 handlePaginate(prevPage);
               }}
@@ -133,7 +132,7 @@ const StarshipPage = () => {
             </IconButton>
 
             <IconButton
-              disabled={!nextPage ? true : false}
+              disabled={(!nextPage || isFetching) ? true : false}
               onClick={() => {
                 handlePaginate(nextPage);
               }}

@@ -44,7 +44,6 @@ const SwapiContextProvider = (props: Props) => {
       setPeople(peopleData.data);
       setVehicles(vehicleData.data);
       setSpecies(speciesData.data);
-      console.log(filmData.data);
       setIsLoading(false);
     };
     try {
