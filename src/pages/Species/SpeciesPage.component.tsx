@@ -98,17 +98,17 @@ const SpeciesPage = () => {
       }
 
       const newRows: any = [];
-      newData.data.results.forEach((vehicle: Record<string, any>) => {
+      newData.data.results.forEach((specie: Record<string, any>) => {
         newRows.push(
           createData(
-            vehicle.name,
-            vehicle.model,
-            vehicle.vehicle_class,
-            vehicle.manufacturer,
-            vehicle.length,
-            vehicle.crew,
-            vehicle.passengers,
-            vehicle.cargo_capacity
+            specie.name,
+            specie.classification,
+            specie.designation,
+            specie.average_height,
+            specie.average_lifespan,
+            specie.eye_colors,
+            specie.hair_colors,
+            specie.language
           )
         );
       });
